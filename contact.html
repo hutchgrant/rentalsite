@@ -1,0 +1,196 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="css/landing-page.css" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+            <div class="container topnav">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand topnav" href="index.html#">YorkU Village Housing</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="./index.html#about">About</a>
+                        </li>
+                        <li>
+                            <a href="./index.html#services">Services</a>
+                        </li>
+                        <li>
+                            <a href="./index.html#contact">Apply</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+        <br>
+        <div class="container content">
+            <h1 class="text-center">YorkU Village Housing</h1>
+            <br>
+        	<div class="col-md-3 col-sm-1" ></div>
+	        <div class="col-md-6 col-sm-9 col-xs-12">
+                <div class="contactTitle text-center"><h4>Application Form</h4></div>
+                <div class="contactForm">
+		        <form action="contact.php" method="post">
+			<div class="contactFormDetails">
+		        	<p>
+                        <label for="a">First Name: </label>
+                        <input type="text" name="fName"  maxlength="30" required autofocus pattern="[A-Za-z]{3,30}"/>
+                    </p>
+		        	<p>
+                        <label>Last Name: </label>
+                        <input type="text" name="lName" maxlength="30" required pattern="[A-Za-z]{3,30}"/>
+                    </p>
+		        	<p>
+                        <label>Telephone: </label>
+                        <input type="text" name="telNum" size="12" maxlength="12" required pattern="\d{10}" title="phone number (10 digits, area code + number)">
+                    </p>
+		        	<p>
+                        <label>Email: </label>
+                        <input type="email" name="email" maxlength="40" required title="yourname@yoursite.com"/>
+                    </p>
+		        	<p>
+                        <label>Date of Birth(dd/mm/yyyy): </label>
+                        <input type="date" name="dateOfBirth" maxlength="10" required pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" title="dd/mm/yyyy"/>
+                    </p>
+		        	<p>
+                        <label>School: </label>
+                        <input type="text" name="school" maxlength="30" required pattern="[A-Za-z ]+"/>
+                    </p>
+		        	<p>
+                        <label>Program of study: </label>
+                        <input type="text" name="program" maxlength="30" required pattern="[A-Za-z ]+"/>
+                    </p>
+		        	<p>
+                        <label>Year: </label>
+                        <select name="year" required >
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5+</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label>Budget: </label>
+                        <select name="budget" required>
+                            <option>600-650</option>
+                            <option>650-700</option>
+                            <option>700-750</option>
+                            <option>750-800</option>
+                        </select>
+                    </p>
+		        	<p>
+                        <label>Move in date(dd/mm/yyyy):</label>
+                        <input type="date" name="moveInDate" size="10" maxlength="10" required pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](20)\d\d" title="dd/mm/yyyy"/>
+                    </p>
+		        	<p>
+                        <label>Contract(months): </label>
+                        <select name="contract" required >
+                                <option>8</option>
+                                <option>12</option>
+                        </select>
+                    </p>
+		        	<p>
+                        <label>Emergency Contact: </label>
+                        <input type="text" name="nextOfKin" maxlength="40" required pattern="[A-Za-z ]+" title="first and last name"/>
+                    </p>
+		        	<p>
+                        <label>Contact's telephone: </label>
+                        <input type="text" name="telKin" size="12" maxlength="12" required pattern="\d{10}" title="phone number (10 digits, area code + number)">
+                    </p>
+                    <p>
+                        <label>Comments: </label>
+                       <textarea name="comment"  rows="3" maxlength="300" title="*optional* enter any notes/comments"></textarea>
+                    </p>
+			</div>
+
+			<div class="text-center">
+				<div class="g-recaptcha" data-sitekey=""></div>
+                        	<button type="submit"  value="submit">Submit</button>
+			</div>
+                    </form>
+                <br>
+                </div>
+                <br><br>
+                 <p>Once your application has been reviewed, we will respond as soon as possible. Please understand, we receive a lot of applications and we may not respond immediately.</p>
+	        </div>
+	        <div class="col-md-3 col-sm-1" ></div>
+	    </div>
+        <!-- Content Bottom -->
+        <div class="container contentFill">
+        <br><br>
+               
+        </div>
+         <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="/index.html#">Home</a>
+                            </li>
+                            <li class="footer-menu-divider">&sdot;</li>
+                            <li>
+                                <a href="/index.html#about">About</a>
+                            </li>
+                            <li class="footer-menu-divider">&sdot;</li>
+                            <li>
+                                <a href="/index.html#services">Services</a>
+                            </li>
+                            <li class="footer-menu-divider">&sdot;</li>
+                            <li>
+                                <a href="./index.html#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    </body>
+</html>
